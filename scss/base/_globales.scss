@@ -1,0 +1,72 @@
+@use 'variables' as v;
+@use 'base/mixins' as m;
+
+html {
+	font-size: 6.25%; /*  1rem = 1px */
+	box-sizing: border-box;
+	scroll-snap-type: y mandatory;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 15em;
+	font-family: v.$fuente_principal;
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+	background-image: url('../img/bg-intro-mobile.png');
+	background-color: v.$rojo;
+
+	@include m.desktop {
+		background-image: url('../img/bg-intro-desktop.png');
+	}
+}
+
+h1,
+h2,
+h3 {
+	color: v.$negro;
+}
+
+h1 {
+	font-size: 40rem;
+}
+
+h2 {
+	font-size: 36rem;
+}
+
+h3 {
+	font-size: 30rem;
+}
+
+p {
+	font-size: 20rem;
+}
+
+img {
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.contenedor {
+	width: min(95%, 1200rem);
+	margin: 0px auto;
+}

@@ -1,0 +1,48 @@
+@use 'base/variables' as v;
+
+.input-contenedor {
+	position: relative;
+}
+
+.error {
+	visibility: hidden;
+	position: absolute;
+	padding: 0 20rem;
+
+	top: 13rem;
+	right: 0;
+}
+
+.formulario-label {
+	visibility: hidden;
+	display: block;
+	text-align: right;
+	font-size: 12rem;
+	font-style: italic;
+	font-weight: 600;
+	color: v.$rojo;
+	margin-top: 10rem;
+}
+
+.input-error {
+	border: 2px solid v.$rojo;
+}
+
+.error-email {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	width: 90%;
+	height: 10rem;
+
+	top: 20rem;
+
+	span {
+		color: v.$rojo;
+	}
+}
+
+#email {
+	background-color: transparent;
+}
